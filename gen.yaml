@@ -2,28 +2,30 @@ configVersion: 1.0.0
 management:
   docChecksum: 2516596125ef223fbbef6c434d22eaac
   docVersion: 1.0.0
-  speakeasyVersion: 1.111.2
-  generationVersion: 2.173.0
+  speakeasyVersion: 1.114.1
+  generationVersion: 2.181.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  flattenGlobalSecurity: true
-  repoURL: https://github.com/speakeasy-sdks/ML-Productions-sample-sdk.git
+  comments: {}
   sdkClassName: Widget-Service
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/speakeasy-sdks/ML-Productions-sample-sdk.git
 features:
   typescript:
-    core: 2.94.0
+    core: 3.1.0
     flattening: 2.81.1
     globalServerURLs: 2.82.0
 typescript:
-  version: 0.1.0
+  version: 0.2.0
   author: ML-Productions
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: sdk/models/callbacks
+      errors: sdk/models/errors
+      operations: sdk/models/operations
+      shared: sdk/models/shared
+      webhooks: sdk/models/webhooks
   installationURL: https://github.com/speakeasy-sdks/ML-Productions-sample-sdk
   maxMethodParams: 4
   packageName: Widget-Service

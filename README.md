@@ -15,15 +15,15 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 - [ ] 🎁 Publish your SDK to package managers by [configuring automatic publishing](https://www.speakeasyapi.dev/docs/productionize-sdks/publish-sdks)
 - [ ] ✨ When ready to productionize, delete this section from the README
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add https://github.com/speakeasy-sdks/ML-Productions-sample-sdk
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add https://github.com/speakeasy-sdks/ML-Productions-sample-sdk
@@ -32,8 +32,6 @@ yarn add https://github.com/speakeasy-sdks/ML-Productions-sample-sdk
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { WidgetService } from "Widget-Service";
 
@@ -51,10 +49,10 @@ import { WidgetService } from "Widget-Service";
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
 
-## [pets](docs/sdks/pets/README.md)
+### [.pets](docs/sdks/pets/README.md)
 
 * [createPets](docs/sdks/pets/README.md#createpets) - Create a pet
 * [listPets](docs/sdks/pets/README.md#listpets) - List all pets
@@ -63,16 +61,12 @@ import { WidgetService } from "Widget-Service";
 
 <!-- Start Dev Containers -->
 
-
-
 <!-- End Dev Containers -->
 
 <!-- Start Error Handling -->
 # Error Handling
 
 Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
-
-
 <!-- End Error Handling -->
 
 <!-- Start Server Selection -->
@@ -87,7 +81,6 @@ You can override the default server globally by passing a server index to the `s
 | 0 | `http://petstore.swagger.io/v1` | None |
 
 For example:
-
 
 ```typescript
 import { WidgetService } from "Widget-Service";
@@ -110,7 +103,6 @@ import { WidgetService } from "Widget-Service";
 ## Override Server URL Per-Client
 
 The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
-
 
 ```typescript
 import { WidgetService } from "Widget-Service";
@@ -149,8 +141,6 @@ const httpClient = axios.create({
 
 const sdk = new WidgetService({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
