@@ -1,5 +1,5 @@
 # Pets
-(*.pets*)
+(*pets*)
 
 ### Available Operations
 
@@ -21,7 +21,6 @@ import { WidgetService } from "Widget-Service";
 
   const res = await sdk.pets.createPets();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -37,8 +36,12 @@ import { WidgetService } from "Widget-Service";
 
 ### Response
 
-**Promise<[operations.CreatePetsResponse](../../models/operations/createpetsresponse.md)>**
+**Promise<[operations.CreatePetsResponse](../../sdk/models/operations/createpetsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## listPets
 
@@ -56,7 +59,6 @@ const limit: number = 21453;
 
   const res = await sdk.pets.listPets(limit);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -73,8 +75,12 @@ const limit: number = 21453;
 
 ### Response
 
-**Promise<[operations.ListPetsResponse](../../models/operations/listpetsresponse.md)>**
+**Promise<[operations.ListPetsResponse](../../sdk/models/operations/listpetsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## showPetById
 
@@ -92,7 +98,6 @@ const petId: string = "string";
 
   const res = await sdk.pets.showPetById(petId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -109,5 +114,9 @@ const petId: string = "string";
 
 ### Response
 
-**Promise<[operations.ShowPetByIdResponse](../../models/operations/showpetbyidresponse.md)>**
+**Promise<[operations.ShowPetByIdResponse](../../sdk/models/operations/showpetbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
