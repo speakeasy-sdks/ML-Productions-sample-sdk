@@ -1,6 +1,6 @@
 {
   "name": "Widget-Service",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "ML-Productions",
   "scripts": {
     "prepare": "tsc --build",
