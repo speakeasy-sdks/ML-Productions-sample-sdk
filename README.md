@@ -14,7 +14,7 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 - [ ] ♻️ Refine your SDK quickly by iterating locally with the [Speakeasy CLI](https://github.com/speakeasy-api/speakeasy)
 - [ ] 🎁 Publish your SDK to package managers by [configuring automatic publishing](https://www.speakeasyapi.dev/docs/productionize-sdks/publish-sdks)
 - [ ] ✨ When ready to productionize, delete this section from the README
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### NPM
@@ -28,16 +28,17 @@ npm add https://github.com/speakeasy-sdks/ML-Productions-sample-sdk
 ```bash
 yarn add https://github.com/speakeasy-sdks/ML-Productions-sample-sdk
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
 ### Example
 
 ```typescript
 import { WidgetService } from "Widget-Service";
 
-(async () => {
+async function run() {
     const sdk = new WidgetService();
 
     const res = await sdk.pets.createPets();
@@ -45,27 +46,24 @@ import { WidgetService } from "Widget-Service";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
-
 
 ### [pets](docs/sdks/pets/README.md)
 
 * [createPets](docs/sdks/pets/README.md#createpets) - Create a pet
 * [listPets](docs/sdks/pets/README.md#listpets) - List all pets
 * [showPetById](docs/sdks/pets/README.md#showpetbyid) - Info for a specific pet
-<!-- End SDK Available Operations -->
+<!-- End Available Resources and Operations [operations] -->
 
-<!-- Start Dev Containers -->
-
-<!-- End Dev Containers -->
-
-<!-- Start Error Handling -->
+<!-- Start Error Handling [errors] -->
 ## Error Handling
 
 Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
@@ -79,23 +77,30 @@ Example
 ```typescript
 import { WidgetService } from "Widget-Service";
 
-(async () => {
+async function run() {
     const sdk = new WidgetService();
 
     let res;
     try {
         res = await sdk.pets.createPets();
-    } catch (e) {}
+    } catch (err) {
+        if (err instanceof errors.SDKError) {
+            console.error(err); // handle exception
+            throw err;
+        }
+    }
 
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Error Handling -->
+<!-- End Error Handling [errors] -->
 
-<!-- Start Server Selection -->
+<!-- Start Server Selection [server] -->
 ## Server Selection
 
 ### Select Server by Index
@@ -111,7 +116,7 @@ You can override the default server globally by passing a server index to the `s
 ```typescript
 import { WidgetService } from "Widget-Service";
 
-(async () => {
+async function run() {
     const sdk = new WidgetService({
         serverIdx: 0,
     });
@@ -121,7 +126,9 @@ import { WidgetService } from "Widget-Service";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 
@@ -132,7 +139,7 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```typescript
 import { WidgetService } from "Widget-Service";
 
-(async () => {
+async function run() {
     const sdk = new WidgetService({
         serverURL: "http://petstore.swagger.io/v1",
     });
@@ -142,21 +149,23 @@ import { WidgetService } from "Widget-Service";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Server Selection -->
+<!-- End Server Selection [server] -->
 
-<!-- Start Custom HTTP Client -->
+<!-- Start Custom HTTP Client [http-client] -->
 ## Custom HTTP Client
 
-The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
+The Typescript SDK makes API calls using the [axios](https://axios-http.com/docs/intro) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
 
 For example, you could specify a header for every request that your sdk makes as follows:
 
 ```typescript
-from Widget-Service import WidgetService;
-import axios;
+import { Widget-Service } from "WidgetService";
+import axios from "axios";
 
 const httpClient = axios.create({
     headers: {'x-custom-header': 'someValue'}
@@ -164,7 +173,7 @@ const httpClient = axios.create({
 
 const sdk = new WidgetService({defaultClient: httpClient});
 ```
-<!-- End Custom HTTP Client -->
+<!-- End Custom HTTP Client [http-client] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 
