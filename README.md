@@ -41,7 +41,10 @@ import { WidgetService } from "Widget-Service";
 async function run() {
     const sdk = new WidgetService();
 
-    const res = await sdk.pets.createPets();
+    const res = await sdk.pets.createPets({
+        id: 596804,
+        name: "string",
+    });
 
     if (res.statusCode == 200) {
         // handle response
@@ -82,7 +85,10 @@ async function run() {
 
     let res;
     try {
-        res = await sdk.pets.createPets();
+        res = await sdk.pets.createPets({
+            id: 596804,
+            name: "string",
+        });
     } catch (err) {
         if (err instanceof errors.SDKError) {
             console.error(err); // handle exception
@@ -121,7 +127,10 @@ async function run() {
         serverIdx: 0,
     });
 
-    const res = await sdk.pets.createPets();
+    const res = await sdk.pets.createPets({
+        id: 596804,
+        name: "string",
+    });
 
     if (res.statusCode == 200) {
         // handle response
@@ -144,7 +153,10 @@ async function run() {
         serverURL: "http://petstore.swagger.io/v1",
     });
 
-    const res = await sdk.pets.createPets();
+    const res = await sdk.pets.createPets({
+        id: 596804,
+        name: "string",
+    });
 
     if (res.statusCode == 200) {
         // handle response
