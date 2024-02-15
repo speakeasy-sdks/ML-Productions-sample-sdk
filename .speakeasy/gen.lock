@@ -4,15 +4,15 @@ management:
   docChecksum: 1bdb7a6f8bf3995d4b40475228403253
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.230.3
-  releaseVersion: 0.3.2
-  configChecksum: f4e7e1a245971e838efa207588c0fe35
+  generationVersion: 2.258.0
+  releaseVersion: 0.3.3
+  configChecksum: 8ea2b1573badb69c941005652d417152
   repoURL: https://github.com/speakeasy-sdks/ML-Productions-sample-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/ML-Productions-sample-sdk
 features:
   typescript:
-    core: 3.4.5
+    core: 3.4.7
     flattening: 2.81.1
     globalServerURLs: 2.82.1
 generatedFiles:
