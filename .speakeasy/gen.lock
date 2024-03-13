@@ -3,18 +3,18 @@ id: 996081fa-80d1-4a33-913c-4ce8b08eb603
 management:
   docChecksum: 1bdb7a6f8bf3995d4b40475228403253
   docVersion: 1.0.0
-  speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 0.3.3
-  configChecksum: 8ea2b1573badb69c941005652d417152
+  speakeasyVersion: 1.207.1
+  generationVersion: 2.280.6
+  releaseVersion: 0.3.4
+  configChecksum: 61ecdc82b5e1d3fe1aeda0889683a713
   repoURL: https://github.com/speakeasy-sdks/ML-Productions-sample-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/ML-Productions-sample-sdk
 features:
   typescript:
-    core: 3.4.7
+    core: 3.4.8
     flattening: 2.81.1
-    globalServerURLs: 2.82.1
+    globalServerURLs: 2.82.2
 generatedFiles:
   - src/sdk/pets.ts
   - src/sdk/sdk.ts
